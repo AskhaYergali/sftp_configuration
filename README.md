@@ -16,11 +16,17 @@ sudo vim /etc/ssh/sshd_config
 
 ### - Add to the tail
 Subsystem sftp internal-sftp
+
 Match Group sftp
+
 	ChrootDirectory path/to/your/sftp/root/directory
+	
 	ForceCommand internal-sftp
+	
 	X11Forwarding no
+	
 	AllowTCPForwarding no
+	
 	PasswordAuthentication yes
  
 ### - Create directory for your sftp root directory
