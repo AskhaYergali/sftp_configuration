@@ -34,7 +34,7 @@ sudo chown root:root path/to/your/sftp/root/directory
 sudo chmod 755 path/to/your/sftp/root/directory
 
 ### - Restart sshd
-service sshd restart
+sudo service sshd restart
 
 ### Notes:
 chroot directory and all its parents should have at max 755 permissions
