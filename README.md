@@ -46,4 +46,5 @@ Configuration the sftp connection to the server.
 chroot directory and all its parents should have at max 755 permissions
 
 ChrootDirectory in the sshd config file may be %h, when %h is determined for the user,
-thus we have to change user's directory, by using -d, to needed directory which will be used  // sudo usermod -d /dir username
+thus we have to change user's directory, by using -d, to needed directory which will be used
+	sudo usermod -d /dir/username username
