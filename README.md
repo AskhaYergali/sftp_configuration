@@ -4,17 +4,17 @@ Configuration the sftp connection to the server.
 ### Create a group for sftp users:
 	sudo groupadd sftp
 
-### create the user belonging to this group
+### Create the user belonging to this group:
 	sudo useradd username -g sftp
 	sudo passwd user-password
 
-### open servers sshd config file with your favorit redactor, usually /etc/ssh/sshd_config
+### Open servers sshd config file with your favorit redactor, usually /etc/ssh/sshd_config:
 	sudo vim /etc/ssh/sshd_config
 
-### comment this line
+### Comment this line:
 	#Subsystem	sftp	/usr/libexec/openssh/sftp-server
 
-### add to the tail
+### Add to the tail:
 	Subsystem sftp internal-sftp
 
 	Match Group sftp
@@ -29,17 +29,17 @@ Configuration the sftp connection to the server.
 	
 		PasswordAuthentication yes
  
-### create directory for your sftp root directory
+### Create directory for your sftp root directory:
 	sudo mkdir path/to/your/sftp/root/directory
 
-### make root the owner and group owner of the sftp root directory
+### Make root the owner and group owner of the sftp root directory:
 	sudo chown root:root path/to/your/sftp/root/directory
 
-### give permissions to other users only to read and execute in this directory 
+### Give permissions to other users only to read and execute in this directory:
 	#without this restrictions user will not be able to connect through sftp
 	sudo chmod 755 path/to/your/sftp/root/directory
 
-### restart sshd
+### Restart sshd:
 	sudo service sshd restart
 
 ### Notes:
