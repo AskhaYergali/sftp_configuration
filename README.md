@@ -49,3 +49,5 @@ ChrootDirectory in the sshd config file may be %h, when %h is determined for the
 thus we have to change user's directory, by using -d, to needed directory which will be used
 
 	sudo usermod -d /needed/sftp/dir/ username
+
+Finally by configuring permissions to the folders we can limit each user to theyrs own folders.
