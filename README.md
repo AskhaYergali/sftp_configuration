@@ -1,5 +1,5 @@
 # sftp_configuration
-Configuration the sftp connection to the server.
+Configuring the sftp connection to the server.
 
 ### Create a group for sftp users:
 	sudo groupadd sftp
